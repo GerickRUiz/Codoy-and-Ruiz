@@ -16,13 +16,16 @@
   </p>
 
   <ion-item>
-    <ion-label>Height in feet and inches: </ion-label>
+    <ion-label color="dark">Height in feet and inches: </ion-label>
     <ion-input type="number" [(ngModel)] = "height"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label> Gender: </ion-label>
-    <ion-input type="Gender" [(ngModel)] = "Gender"></ion-input>
+    <ion-label color="dark"> Gender: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="gender">
+      <ion-option value="m">Male</ion-option>
+      <ion-option value="f">Female</ion-option>
+    </ion-select>
   </ion-item>
 
   <button ion-button color="secondary" (click) = "calculateIW()"> calculate
@@ -31,5 +34,5 @@
   <ion-item *ngIf="IW">
     <h2>Ideal Weight According to: {{IW}} <code> ({{iwMessage}})</code></h2>
   </ion-item>
-  
+
 </ion-content>
