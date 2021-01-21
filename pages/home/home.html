@@ -36,8 +36,13 @@
   <button ion-button color="secondary" (click) = "calculateIW()"> calculate
   </button>
 
-  <ion-item *ngIf="IW">
-    <h2>Ideal Weight According to: {{IW}} <code> ({{iwMessage}})</code></h2>
+  <ion-item *ngIf="gender">
+    <h2>Ideal Weight According to: {{IW}} <code> ({{iwMessage}})
+      </code></h2>
+    <h2><code> Robinson formula {{robinson_formula}}. </code> </h2>
+    <h2><code> Miller formula {{miller_formula}}. </code> </h2>
+    <h2><code> Hamwi formula {{hamwi_formula}}. </code> </h2>
+    <h2><code> Devine formula {{devin_formula}}. </code> </h2>
   </ion-item>
 
 </ion-content>
